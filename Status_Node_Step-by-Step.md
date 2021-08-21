@@ -128,3 +128,5 @@ Dockerイメージを実行するためのLinuxマシンのデプロイが困難
 
 ---
 Last update: 2021-08-12
+
+Original site https://status.im/technical/status_node_step_by_step.html
