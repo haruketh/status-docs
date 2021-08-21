@@ -125,3 +125,6 @@ Dockerイメージを実行するためのLinuxマシンのデプロイが困難
 
 `sudo apt-get install jq` を実行して [jq](https://stedolan.github.io/jq/) をインストールしてください。
 
+
+---
+Last update: 2021-08-12
