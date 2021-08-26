@@ -27,21 +27,12 @@ Dockerイメージを実行するためのLinuxマシンのデプロイが困難
 ![](https://status.im/technical/status_node_step_by_step/docker-compose.png)
 
 
-## 3. make をインストールする
+## 3. make, jq, qrencodeをインストールする
 
-1. `sudo apt install make`
-
-![](https://status.im/technical/status_node_step_by_step/make.png)
+1. `sudo apt install make jq qrencode`
 
 
-## 4. jq をインストールする
-
-1. `sudo apt-get install jq`
-
-![](https://status.im/technical/status_node_step_by_step/jq.png)
-
-
-## 5. Status-go をクローンする
+## 4. Status-go をクローンする
 
 1. `git clone https://github.com/status-im/status-go.git`
 2. `cd status-go/`
@@ -49,14 +40,14 @@ Dockerイメージを実行するためのLinuxマシンのデプロイが困難
 ![](https://status.im/technical/status_node_step_by_step/clone-status-go.png)
 
 
-## 6. Statusノードを実行する
+## 5. Statusノードを実行する
 
 1. `make run-mailserver-docker`
 
 ![](https://status.im/technical/status_node_step_by_step/run-a-status-node.png)
 
 
-## 7. ヘルスチェック
+## 6. ヘルスチェック
 
 1. `export DATA='{"jsonrpc":"2.0","method":"admin_peers","params":[],"id":1}'`
 2. `curl -s -H 'content-type: application/json' -d $DATA localhost:8545 | jq .`
@@ -68,7 +59,7 @@ Dockerイメージを実行するためのLinuxマシンのデプロイが困難
 ![](https://status.im/technical/status_node_step_by_step/health-check.png)
 
 
-## 8. Waku envelopes をチェックする
+## 7. Waku envelopes をチェックする
 
 1. `curl -s localhost:9090/metrics | grep '^waku_envelopes_received_total'`
 
@@ -127,6 +118,6 @@ Dockerイメージを実行するためのLinuxマシンのデプロイが困難
 
 
 ---
-Last update: 2021-08-12
+Last update: 2021-08-25
 
 Original site https://status.im/technical/status_node_step_by_step.html
